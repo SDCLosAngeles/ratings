@@ -1,0 +1,26 @@
+{
+  "name": "ratings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nick-Sooter/ratings.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nick-Sooter/ratings/issues"
+  },
+  "homepage": "https://github.com/Nick-Sooter/ratings#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0"
+  }
+}
