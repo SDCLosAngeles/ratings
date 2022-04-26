@@ -8,11 +8,11 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'error connecting'))
 db.once('open', function () {
   console.log('Connected Mongo = Happy Mongo');
-})
+});
 
 const reviewSchema = mongoose.Schema({
+  id: Number,
   product_id: Number,
-  review_id: Number,
   rating: Number,
   summary: String,
   recommend: Boolean,

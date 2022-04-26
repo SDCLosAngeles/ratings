@@ -5,17 +5,16 @@ const {
   CharacteristicRev
 } = require('../index');
 
-const markHelpful = function (review_id) {
+const reportReview = function (review_id) {
   return Reviews.findOneAndUpdate(
     { id: review_id },
-    // $inc - mongoose increment operator
-    { $inc: { helpfulness: 1 } }
+    { reported: true }
   )
     .exec()
     .then((result) => {
-      console.log('markHelpful result:', result);
+      console.log('reportReview result:', result);
       return result;
     });
 };
 
-module.exports = markHelpful;
+module.exports = reportReview;
