@@ -20,7 +20,9 @@ const reviewSchema = mongoose.Schema({
   body: String,
   date: String,
   reviewer_name: String,
+  reviewer_email: String,
   helpfulness: Number,
+  reported: Number,
 });
 
 const characteristicSchema = mongoose.Schema({
@@ -29,7 +31,7 @@ const characteristicSchema = mongoose.Schema({
   name: String,
 });
 
-const characteristicRevSchema = mongoose.schema({
+const characteristicRevSchema = mongoose.Schema({
   id: Number,
   characteristic_id: Number,
   review_id: Number,
@@ -42,13 +44,13 @@ const photoSchema = mongoose.Schema({
   url: String,
 });
 
-const Reviews = mongoose.model(Reviews, reviewSchema, 'reviews');
+const Reviews = mongoose.model('Reviews', reviewSchema, 'reviews');
 
-const Characteristics = mongoose.model(Characteristics, characteristicSchema, 'characteristics');
+const Characteristics = mongoose.model('Characteristics', characteristicSchema, 'characteristics');
 
-const CharacteristicRev = mongoose.model(CharacteristicRev, characteristicRevSchema, 'characteristic_reviews');
+const CharacteristicRev = mongoose.model('CharacteristicRev', characteristicRevSchema, 'characteristic_reviews');
 
-const Photos = mongoose.model(Photos, photoSchema, 'reviews_photos');
+const Photos = mongoose.model('Photos', photoSchema, 'reviews_photos');
 
 module.exports = {
   Reviews,

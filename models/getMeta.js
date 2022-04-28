@@ -31,7 +31,7 @@ const getMeta = async function (prodId) {
     result = await Review.aggregate([
       {
         $match: {
-          product_id: //111
+          product_id: prodId
         }
       },
       {
